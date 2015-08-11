@@ -190,8 +190,11 @@ desired effect
       </div>
       <div class="modal-body">
         <p>Pilih Kelurahan/Desa</p>
-		  <select class="form-control">
-		</select>
+          <select class="form-control">
+              @foreach ($rb as $rb)
+              <option>{{ $rb->desa_kel }}</option>
+              @endforeach
+          </select>
       </div>
       <div class="modal-footer">
 		<button type="button" class="btn btn-success">Lanjut</button>

@@ -32,7 +32,8 @@ class RbController extends Controller {
 
     public function dashboard()
     {
-        return view('rb/dashboard');
+        $rb = Rb::all();
+        return view('rb/dashboard')->with('rb', $rb);
     }
 
 	public function saveData(Request $request)
