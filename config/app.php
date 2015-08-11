@@ -136,7 +136,10 @@ return [
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
         'Illuminate\Html\HtmlServiceProvider',
+<<<<<<< HEAD
         'Maatwebsite\Excel\ExcelServiceProvider',
+=======
+>>>>>>> b80de0f59bbdcfeea5d1c4dcf3a3c32bdca466ad
 
 		/*
 		 * Application Service Providers...
@@ -195,8 +198,12 @@ return [
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
         'Form'      => 'Illuminate\Html\FormFacade',
+<<<<<<< HEAD
         'HTML'      => 'Illuminate\Html\HtmlFacade',
         'Excel' 	=> 'Maatwebsite\Excel\Facades\Excel'
+=======
+        'HTML'      => 'Illuminate\Html\HtmlFacade'
+>>>>>>> b80de0f59bbdcfeea5d1c4dcf3a3c32bdca466ad
 
 	],
 

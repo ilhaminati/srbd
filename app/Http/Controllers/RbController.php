@@ -73,6 +73,7 @@ class RbController extends Controller {
         return redirect('/dashboard');
 	}
 
+<<<<<<< HEAD
     public function excel()
     {
         $excel = App::make('excel');
@@ -83,4 +84,6 @@ class RbController extends Controller {
         return view('rb/export');
     }
 
+=======
+>>>>>>> b80de0f59bbdcfeea5d1c4dcf3a3c32bdca466ad
 }
