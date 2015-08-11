@@ -15,6 +15,8 @@ Route::get('/', 'RbController@index');
 
 Route::get('/view', 'RbController@view');
 
+Route::get('/export', 'RbController@export');
+
 Route::get('/dashboard','RbController@dashboard');
 
 Route::post('/save-data', 'RbController@saveData');

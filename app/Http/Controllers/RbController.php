@@ -73,4 +73,14 @@ class RbController extends Controller {
         return redirect('/dashboard');
 	}
 
+    public function excel()
+    {
+        $excel = App::make('excel');
+    }
+
+    public function export()
+    {
+        return view('rb/export');
+    }
+
 }
