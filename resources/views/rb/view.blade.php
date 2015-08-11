@@ -13,11 +13,6 @@
         <th>Kode Unsur</th>
         <th>Nama Genetik</th>
         <th>Sub Nama Genetik</th>
-<<<<<<< HEAD
-		
-=======
->>>>>>> b80de0f59bbdcfeea5d1c4dcf3a3c32bdca466ad
-
         <th>Edit</th>
     </tr>
     </thead>
@@ -40,9 +35,7 @@
     @endforeach
     </tbody>
 </table>
-<<<<<<< HEAD
+
 </div> 
-=======
 </div>
->>>>>>> b80de0f59bbdcfeea5d1c4dcf3a3c32bdca466ad
 @include('rb.footer')

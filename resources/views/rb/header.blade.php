@@ -160,11 +160,7 @@ desired effect
                 <!-- Optionally, you can add icons to the links -->
                 <li class="active"><a href="{{ URL::to('/dashboard') }}"><i class="fa fa-pencil-square-o"></i> <span>Tambah Data</span></a></li>
                 <li><a href="{{ URL::to('/view') }}"><i class="fa fa-table"></i> <span>Lihat Data</span></a></li>
-<<<<<<< HEAD
                 <li><a href="#export" data-toggle="modal"><i class="fa fa-file-excel-o"></i> <span>Export Data</span></a></li>
-=======
-                <li><a href="#"><i class="fa fa-file-excel-o"></i> <span>Export Data</span></a></li>
->>>>>>> b80de0f59bbdcfeea5d1c4dcf3a3c32bdca466ad
                 <li class="treeview">
                     <a href="#"><i class="fa fa-link"></i> <span>Menu Dropdown</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
@@ -181,7 +177,6 @@ desired effect
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>Sistem Rupabumi Desa</h1>
-<<<<<<< HEAD
         </section>
 		<!-- Modal -->
 <div id="export" class="modal fade" role="dialog">
@@ -196,9 +191,6 @@ desired effect
       <div class="modal-body">
         <p>Pilih Kelurahan/Desa</p>
 		  <select class="form-control">
-              @foreach ($rb as $rb)
-		  <option>{{ $rb->desa_kel }}</option>
-              @endforeach
 		</select>
       </div>
       <div class="modal-footer">
@@ -209,6 +201,4 @@ desired effect
 
   </div>
 </div>
-=======
         </section>
->>>>>>> b80de0f59bbdcfeea5d1c4dcf3a3c32bdca466ad
