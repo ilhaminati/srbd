@@ -1,4 +1,3 @@
-@include('rb.header')
 <table class="table table-striped">
     <thead>
     <tr>
@@ -35,7 +34,3 @@
     @endforeach
     </tbody>
 </table>
-<a class="btn btn-info" href="{{ URL::to('/excel') }}" role="button">Download</a>
-</div> 
-</div>
-@include('rb.footer')

@@ -197,7 +197,7 @@ desired effect
           </select>
       </div>
       <div class="modal-footer">
-		<button type="button" class="btn btn-success">Lanjut</button>
+		<a class="btn btn-info" href="{{ URL::to('/export') }}" role="button">Lanjut</a>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>

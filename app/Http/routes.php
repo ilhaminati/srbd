@@ -15,9 +15,9 @@ Route::get('/', 'RbController@index');
 
 Route::get('/view', 'RbController@view');
 
-
 Route::get('/export', 'RbController@export');
 
+Route::get('excel', array('uses' => 'RbController@excel', 'as' => 'rb.excel'));
 
 Route::get('/dashboard','RbController@dashboard');
 

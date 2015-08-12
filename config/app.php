@@ -196,7 +196,7 @@ return [
 		'View'      => 'Illuminate\Support\Facades\View',
         'Form'      => 'Illuminate\Html\FormFacade',
         'HTML'      => 'Illuminate\Html\HtmlFacade',
-        'Excel' 	=> 'Maatwebsite\Excel\Facades\Excel'
+        'Excel' 	=> 'Maatwebsite\Excel\Facades\Excel',
 	],
 
 ];

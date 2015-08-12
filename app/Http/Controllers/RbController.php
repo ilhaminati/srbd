@@ -3,9 +3,9 @@
 use Illuminate\Support\Facades\Session;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
 use App\Model\Rb;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class RbController extends Controller {
 
@@ -77,12 +77,28 @@ class RbController extends Controller {
 
     public function excel()
     {
-        $excel = App::make('excel');
+        Excel::create('Laporan', function($excel)
+        {
+            $excel->sheet('Laporan', function($sheet)
+            {
+                $rb = Rb::all();
+                $sheet->loadView('rb.excel')->with('rb', $rb);
+            })->download('xls');
+        });
     }
+    /* {
+    Excel::create('Laporan', function($excel) {
+
+      $excel->sheet('Laporan', function($sheet) {
+        $rb = Rb::all();
+        $sheet->loadView('rb.excel')->download('xls');
+    
+*/
 
     public function export()
     {
-        return view('rb/export');
+        $rb = Rb::all();
+        return view('rb/export')->with('rb', $rb);
     }
 
 }
