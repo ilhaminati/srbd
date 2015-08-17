@@ -15,6 +15,8 @@ Route::get('/', 'RbController@index');
 
 Route::get('/view', 'RbController@view');
 
+Route::any('/lihat', 'RbController@lihat');
+
 Route::get('/export', 'RbController@export');
 
 Route::get('excel', array('uses' => 'RbController@excel', 'as' => 'rb.excel'));

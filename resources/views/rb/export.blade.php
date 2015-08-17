@@ -1,6 +1,7 @@
 @include('rb.header')
 <section class="content">
         <div>
+        @foreach ($rb as $rb)
             <h1 class="text-center">FORMULIR B</h1>
             <h2 class="text-center">INVENTARISASI NAMA RUPABUMI</h2>
         </div>
@@ -11,14 +12,14 @@
                     <h3>A. Data Acuan</h3>
                         <div class="col-md-6">
                             <h3>I. Wilayah</h3>
-                            <p>Desa/Kelurahan</p>
-                            <p>Kecamatan</p>
-                            <p>Kabupaten/Kota</p>
-                            <p>Provinsi</p>
+                            <p>Desa/Kelurahan {{ $rb->desa_kel }}</p>
+                            <p>Kecamatan {{ $rb->kec }}</p>
+                            <p>Kabupaten/Kota {{ $rb->kab_kot }}</p>
+                            <p>Provinsi {{ $rb->provinsi }}</p>
                         </div>
                 </div>
                 <div class="col-lg-6">
-                    <p>Tanggal/Tahun</p>
+                    <p>Tanggal/Tahun {{ $rb->tanggal }}</p>
                     <div class="col-md-6">
                         <h3>II. Data Dasar Penunjang</h3>
                         <p>No Lembar Peta</p>
@@ -31,6 +32,7 @@
                 </div>
             </div>
         </div>
+        @endforeach
     </section>
 </div>
 @include('rb.footer')

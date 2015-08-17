@@ -190,15 +190,13 @@ desired effect
       </div>
       <div class="modal-body">
         <p>Pilih Kelurahan/Desa</p>
-          <select class="form-control">
-              @foreach ($rb as $rb)
-              <option>{{ $rb->desa_kel }}</option>
-              @endforeach
-          </select>
+       {!! Form::open([ 'action' => [ "RbController@lihat"]]) !!}
+          <input type="text" class="form-control" name="namakelurahan" placeholder="Kelurahan" />
+          <button type="submit" class="btn btn-primary btn-info">Submit</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        {!! Form::close() !!}
       </div>
       <div class="modal-footer">
-		<a class="btn btn-info" href="{{ URL::to('/export') }}" role="button">Lanjut</a>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
 

@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -29,6 +30,17 @@ class RbController extends Controller {
         $rb = Rb::all();
         return view('rb/view')->with('rb', $rb);
 	}
+
+    public function lihat(Request $request)
+    {
+      /*  $rb = $request->all('namakelurahan'); 
+        $rb = Rb::where('desa_kel','namakelurahan')->get();
+      */
+        $input = $request->all();
+        $rb = Rb:: whereDesaKel($input['namakelurahan'])->get();
+        return view('rb/lihat')->with('rb', $rb);
+    }
+
 
     public function dashboard()
     {
@@ -86,18 +98,11 @@ class RbController extends Controller {
             })->download('xls');
         });
     }
-    /* {
-    Excel::create('Laporan', function($excel) {
 
-      $excel->sheet('Laporan', function($sheet) {
-        $rb = Rb::all();
-        $sheet->loadView('rb.excel')->download('xls');
-    
-*/
 
     public function export()
     {
-        $rb = Rb::all();
+        $rb = Rb::where('desa_kel', 'bojongherang')->get();
         return view('rb/export')->with('rb', $rb);
     }
 
